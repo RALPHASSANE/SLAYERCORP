@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('/cover/daytona-pusha-t-chronique.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 20, 0.8); /* ambiance sombre et sobre */
+  backdrop-filter: blur(12px);
+  z-index: 0;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Titre principal */
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.6rem;
+  background: linear-gradient(90deg, #b8f3c1, #9e86ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+nav a {
+  color: #ffffff;
+  border: 1px solid #ffffff55;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+/* Bloc principal */
+main section {
+  background: rgba(70, 30, 90, 0.12);
+  border: 1px solid rgba(180, 255, 200, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 850px;
+  margin: 2rem auto;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #d0ffd8;
+}
+
+p, li {
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #cccccc;
+  padding-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,219 @@
+/* --------- RESET & BASE --------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0c0c0c;
+  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* --------- TYPO --------- */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #dcdcdc;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+/* --------- HEADER --------- */
+header {
+  padding: 2rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: #0c0c0c;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+nav a {
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --------- HERO --------- */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: radial-gradient(circle at center, #181818 0%, #0a0a0a 100%);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* --------- PARALLAX --------- */
+.parallax-bg {
+  background-image: url('covers/horizon.jpg');
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+/* --------- PROJETS --------- */
+.projets {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.liste-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.bloc-projet {
+  background-color: #121212;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bloc-projet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+.bloc-projet img {
+  width: 100%;
+  display: block;
+  height: auto;
+  filter: grayscale(40%);
+  transition: filter 0.3s ease;
+}
+
+.bloc-projet:hover img {
+  filter: grayscale(0%);
+}
+
+.texte-projet {
+  padding: 1rem;
+}
+
+.texte-projet h3 {
+  margin-bottom: 0.5rem;
+}
+
+.texte-projet p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* --------- SECTIONS --------- */
+#apropos, #contact {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+}
+
+footer {
+  border-top: 1px solid #1a1a1a;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
+/* --------- RESPONSIVE --------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .parallax-content {
+    font-size: 1.5rem;
+  }
+}
